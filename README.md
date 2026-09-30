@@ -1,2 +1,2 @@
 # SmartHQ_TestCases
-Test cases for SmartHQ Parts and Accessory Lookup scenarios
+Test cases for SmartHQ features, including Parts & Accessory Lookup and Contact Us support scenarios.

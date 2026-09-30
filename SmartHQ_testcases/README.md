@@ -1,9 +1,13 @@
-# SmartHQ Test Cases – Parts & Accessory Lookup
+# SmartHQ Test Cases
 
-This repository contains **manual** and **automated (Appium)** test cases for the SmartHQ
-**Parts & Accessory Lookup** flow.
+This repository contains **manual** and **automated (Appium)** test cases for SmartHQ features.
 
-## Flow Under Test
+## Features Covered
+
+- **Parts & Accessory Lookup**
+- **Contact Us Support Enhancement**
+
+## Flows Under Test
 
 ```
 Home (Misc Features)
@@ -13,6 +17,11 @@ Home (Misc Features)
         ├── Customer Net       → "Contact your parts distributor for the code"
         │                        → enter customer code → opens distributor website
         └── Accessories Lookup → enter Model / Product / PIM Product ID → shows product details
+
+Support / Contact Us
+   ├── Call Us  → opens phone dialer with 800-792-3395
+   ├── Email Us → opens email composer to SmartHQService.Support@geappliances.com
+   └── Hours of Operation → Monday - Friday 8:30 AM - 5:00 PM EST
 ```
 
 ## Repository Structure
@@ -20,6 +29,7 @@ Home (Misc Features)
 ```
 SmartHQ_testcases/
 ├── Manual_Testcases_Accessory_Lookup.md   # Manual test cases (TC-01 to TC-09)
+├── Manual_Testcases_Contact_Us_Support.md # Manual test cases (CU-01 to CU-07)
 ├── test_accessory_lookup.py               # Appium + pytest automated script
 ├── requirements.txt                       # Python dependencies
 └── README.md                              # This file
@@ -96,9 +106,12 @@ pytest test_accessory_lookup.py --html=report.html --self-contained-html
 
 ## Manual Test Cases
 
-See [`Manual_Testcases_Accessory_Lookup.md`](./Manual_Testcases_Accessory_Lookup.md) for the
-detailed step-by-step manual test cases (TC-01 to TC-09), including preconditions, steps,
-and expected results for both positive and negative scenarios.
+- [`Manual_Testcases_Accessory_Lookup.md`](./Manual_Testcases_Accessory_Lookup.md) – detailed
+  step-by-step manual test cases (TC-01 to TC-09) for Parts & Accessory Lookup, including
+  positive and negative scenarios.
+- [`Manual_Testcases_Contact_Us_Support.md`](./Manual_Testcases_Contact_Us_Support.md) – manual
+  test cases (CU-01 to CU-07) for the Contact Us enhancement covering support phone, email,
+  and hours of operation.
 
 ## Test Coverage Summary
 
@@ -112,3 +125,8 @@ and expected results for both positive and negative scenarios.
 | Accessories Lookup prompt | TC-07 | `test_accessories_lookup_prompts_for_identifier` |
 | Accessories Lookup details (positive) | TC-08 | `test_accessories_lookup_returns_details` |
 | Accessories Lookup invalid input (negative) | TC-09 | `test_accessories_lookup_invalid_input` |
+| Contact Us options displayed | CU-01 | — |
+| Call Us display and routing | CU-02, CU-03 | — |
+| Email Us display and routing | CU-04, CU-05 | — |
+| Hours of operation display | CU-06 | — |
+| Contact Us channel coexistence | CU-07 | — |
